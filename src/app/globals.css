@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* CleanGrid UK design tokens — sourced from .claude/DESIGN.md (Lumina Grid) */
+  --cg-background: #0b1326;
+  --cg-surface: #171f33;
+  --cg-surface-high: #222a3d;
+  --cg-input-bg: #060e20;
+  --cg-border: #3c4a42;
+
+  --cg-text-primary: #dae2fd;
+  --cg-text-secondary: #bbcabf;
+
+  --cg-green: #4edea3;
+  --cg-on-green: #003824;
+  --cg-amber: #ffb95f;
+  --cg-on-amber: #472a00;
+  --cg-red: #ffb4ab;
+  --cg-on-red: #690005;
+
+  --font-cg-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-cg-mono:
+    var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-cg-background: var(--cg-background);
+  --color-cg-surface: var(--cg-surface);
+  --color-cg-surface-high: var(--cg-surface-high);
+  --color-cg-input-bg: var(--cg-input-bg);
+  --color-cg-border: var(--cg-border);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cg-text-primary: var(--cg-text-primary);
+  --color-cg-text-secondary: var(--cg-text-secondary);
+
+  --color-cg-green: var(--cg-green);
+  --color-cg-on-green: var(--cg-on-green);
+  --color-cg-amber: var(--cg-amber);
+  --color-cg-on-amber: var(--cg-on-amber);
+  --color-cg-red: var(--cg-red);
+  --color-cg-on-red: var(--cg-on-red);
+
+  --font-cg-sans: var(--font-cg-sans);
+  --font-cg-mono: var(--font-cg-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cg-background);
+  color: var(--cg-text-primary);
+  font-family: var(--font-cg-sans);
 }
